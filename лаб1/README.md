@@ -18,7 +18,7 @@
 Была использована команда: curl -I -v https://ya.ru
 
 ##В итоге была получена такая информация:
-- [IP](87.250.250.242) "87.250.250.242"
+- IP "87.250.250.242"
 - порт "443"
 - истинное значение хоста ресурса "ya.ru"
 - информация о необходимости кэширования "no-cache,no-store,max-age=0,must-revalidate"
@@ -27,9 +27,9 @@
 - протокол по которому осуществлялся запрос "HTTP"
 
 ##В результате был получен код:
- % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 87.250.250.242:443...
+ ##% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+ ##                                Dload  Upload   Total   Spent    Left  Speed
+ ## 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 87.250.250.242:443...
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to ya.ru (87.250.250.242) port 443 (#0)
  ALPN: offers h2
  ALPN: offers http/1.1
