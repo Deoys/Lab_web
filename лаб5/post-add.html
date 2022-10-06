@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/post.css">
+    <title>lab5</title>
+</head>
+<body>
+
+    <main>
+        <form action="" method="POST" class="form_post">
+            <h1>Форма создания поста</h1>
+            <div class="form_name">
+                <label for="name" class="form_lb">Название</label>
+                <input class="form_input form_input_name" type="text" name="name" id="name">
+            </div>
+            <div class="form_group">
+                <label for="group" class="form_lb">Группа</label>
+                <input class="form_input form_input_group" type="text" name="group" id="grup">
+            </div>
+            <div class="form_shot">
+                <label for="Shot" class="form_lb">Краткое описание</label>
+                <input class="form_input form_input_shot" type="text" name="Shot" id="shot_text_iteam">
+            </div>
+            <div class="form_image">
+                <div class="iteam_img">
+                    <input id="img" class="form_input" type="file" name="photo" multiple accept="image/*">
+                    <div class="fake_btn_input">Выбрать</div>
+                </div>                
+                <div class="file_preview"></div>
+            </div>
+            <div class="form_text">
+                <label for="text_iteam" class="form_lb">Текст публикации</label>
+                <textarea class="form_input form_input_text" name="text_iteam"></textarea>
+            </div>            
+                <button type="submit" class="form_btn">Отправить</button>
+        </form>
+    </main>
+    <script src="./post.js"></script>
+</body>
+</html>
