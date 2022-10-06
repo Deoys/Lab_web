@@ -17,24 +17,28 @@ for (let anchor of anchors){
 //изменение bg четных элементов
 const button = document.getElementById("btn");
 const button_none = document.getElementById("btn_none");
-const iteams = document.querySelectorAll(".iteams_katalog:nth-child(even)");
+const iteams = document.querySelectorAll('.iteams_katalog');
+let default_color = window.getComputedStyle( document.body ,null).getPropertyValue('background-color');
 const hex=[
     "0","1","2","3","4","5","6","7","8","9","A","B","C","D", "E", "F"
 ]
 
 
 button_none.addEventListener("click", () =>{
-    let color = "transparent";
     for(let n=0; n < iteams.length; n++){
-        console.log(iteams);
-        iteams[n].style.backgroundColor = color;
+        if(n % 2 !=0){
+        iteams[n].style.backgroundColor = default_color;
+        }
     }
 })
 
 button.addEventListener("click", () => {
     let hexColor = generateHex();
     for(let n=0; n < iteams.length; n++){
-        iteams[n].style.backgroundColor = hexColor;
+        if(n % 2 !=0){
+            iteams[n].style.backgroundColor = hexColor;
+            }
+        
     }
 })
 
