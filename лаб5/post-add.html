@@ -14,10 +14,12 @@
     </header>
     <main>
         <h1 class="main_h1">Добавить запись</h1>
-        <form action="" method="POST" class="form_post" onsubmit="return validate()">
+        <form action="" method="get" class="form_post">
             <div class="input input_text">
-                <label for="name">Заголовок</label>
+                <label for="name">Заголовок
                 <input type="text" name="Name" id="name" maxlength="255">
+                <span class="error" aria-live="polite"></span>
+            </label>
             </div>
             <div class=" input textarea_text">
                 <label for="text">Текст</label>
