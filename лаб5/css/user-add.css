@@ -1,0 +1,154 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {	margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+a, a:link, a:visited, a:hover {/* color: inherit; */text-decoration: none;/* display: inline-block; */}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;0,800;1,800&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+body *{
+    outline: none;
+}
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+header{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 2%;
+}
+
+.text_h1{
+    width: 90%;
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Logo{
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(218, 216, 216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 500;
+    font-size: 22px;
+}
+form{
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+form > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#check_id{
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.button_sub,
+.checkbox{
+    width: 95%;
+    justify-content:flex-start;
+}
+
+.checkbox > label{
+cursor: pointer;
+}
+
+.checkbox{
+    margin-bottom: 20px;
+}
+
+.button_sub > button{
+    cursor: pointer;
+    height: 45px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(194, 193, 193);
+}
+
+.button_sub > button:hover{
+    background-color: rgb(0, 162, 255);
+    transition: all 0.3s ease-in-out;
+}
+
+.input_label{
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.first{
+    margin-bottom: 20px;
+}
+.later{
+    margin-bottom: 100px;
+}
+
+.password>div{
+    margin-bottom: 150px;
+}
+
+#first-name,
+#last-name,
+#login_in,
+#Email_in,
+#password_first,
+#password_last{
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    height: 80px;
+    width: 800px;
+}
+
+.base_info, .password{
+    display: flex;
+    color: lightslategrey;
+}
+
+
+
