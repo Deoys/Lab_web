@@ -13,13 +13,14 @@
         </a>
     </header>
     <main>
-        <h1 class="main_h1">Добавить запись</h1>
+        <div class="text_h1">
+            <h1 class="main_h1">Добавить запись</h1>
+        </div>    
         <form action="" method="post" class="form_post">
             <div class="input input_text">
-                <label for="name">Заголовок
-                <input type="text" name="Name" id="name" maxlength="1">
-                <span class="error" aria-live="polite"></span>
-            </label>
+                <label for="name">Заголовок</label>
+                <input type="text" name="Name" id="name" maxlength="255">
+                <span class="error" aria-live="polite"></span>            
             </div>
             <div class=" input textarea_text">
                 <label for="text">Текст</label>

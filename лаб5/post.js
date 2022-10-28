@@ -1,40 +1,71 @@
-const Name = document.getElementById("name"),
-      Text = document.getElementById("text"),
-      nameError = document.querySelector('#name + span.error'),
-      form  = document.getElementsByTagName('form')[0];
+var myInput = document.getElementById("password_first");
+var password_verification = document.getElementById("password_last");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+var red = document.querySelectorAll(".red")
 
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+    document.getElementById("errors").style.display = "block";;
+}
 
-Name.addEventListener('input', function(event){
-    if(Name.validity.valid){
-        nameError.textContent='';
-        nameError.className='error';
-    }else{
-        showError();
-    }
-})
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+    document.getElementById("errors").style.display = "none";
+}
 
-form.addEventListener('submit', function(event){
-    if(!Name.validity.valid){
-        showError();
-        event.preventDefault();
-    }
-})
-
-function showError() {
-    if(Name.validity.valueMissing) {
-      // Если поле пустое,
-      // отображаем следующее сообщение об ошибке
-      nameError.textContent = 'You need to enter an e-mail address.';
-    } else if(Name.validity.typeMismatch) {
-      // Если поле содержит не email-адрес,
-      // отображаем следующее сообщение об ошибке
-      nameError.textContent = 'Entered value needs to be an e-mail address.';
-    } else if(Name.validity.tooShort) {
-      // Если содержимое слишком короткое,
-      // отображаем следующее сообщение об ошибке
-      nameError.textContent = `Email should be at least ${ Name.maxLength } characters; you entered ${ email.value.length }.`;
-    }
-  
-    // Задаём соответствующую стилизацию
-    nameError.className = 'error active';
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
   }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+password_verification.onkeyup = function (){
+  var value_password = myInput.value;
+  var value_check = password_verification.value;
+  for(let i = 0; i<red.length; i++){
+    if(value_password != value_check){
+      red[i].style.border = "1px solid red";
+    }
+  else{
+    red[i].style.border = "1px solid green";
+  }
+  }
+}
