@@ -1,5 +1,5 @@
 //плавный скрол
-const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = document.querySelectorAll('a[href*="#K"]')
 
 for (let anchor of anchors){
     anchor.addEventListener("click", (event)=>{
@@ -59,7 +59,12 @@ let iteam = document.querySelectorAll(".iteams_katalog");
 let select = document.getElementById("#sort");
 
 select.addEventListener('change', () =>{
-
+    let color = "transparent";
+    for(let n=0; n < iteams.length; n++){
+        console.log(iteams);
+        iteams[n].style.backgroundColor = color;
+    }
+    
     if(select.value == "min"){
     let sorted = [...iteam].sort((a,b) =>{
         return a.children[2].innerHTML - b.children[2].innerHTML;
