@@ -1,0 +1,135 @@
+@media screen and (max-width: 320px) {
+    
+    .header{
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: unset;
+        height: fit-content;
+    }
+
+    .header>a{
+        max-height: 31.79px;
+        max-width: 144px;
+    }
+
+    .navbar{
+        margin-top: 48px;
+        display: none;
+    }
+    
+    .second-category{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin-top: 159px;
+        padding-left: 12px;
+        display: none;
+    }
+    
+    .second-h3{
+        color: #C2B4DD;
+    }
+
+    .second-li a{
+        color: #FFFFFF;
+    }
+
+    .main-post{
+        flex-direction: column-reverse;
+        margin: 28px 0;
+        padding: 0 12px;
+    }
+
+    .header.open{
+        height: 667px;
+    }
+
+    .header.open .navbar{
+        display: flex;
+    }
+
+    .main-post.open .second-category{
+        display: block;
+    }
+    
+        .menu {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            padding: 0;
+            position: absolute;
+            width: 32px;
+            height: 24px;
+            top: 16px;
+            right: 12px;
+        }
+        .line {
+            fill: none;
+            stroke: #ffff;
+            stroke-width: 6;
+            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .line1 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
+        }
+        .line2 {
+            stroke-dasharray: 60 60;
+            stroke-width: 6;
+        }
+        .line3 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
+        }
+        .opened .line1 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 6;
+        }
+        .opened .line2 {
+            stroke-dasharray: 1 60;
+            stroke-dashoffset: -30;
+            stroke-width: 6;
+        }
+        .opened .line3 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 6;
+        }
+
+    .post-first{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+    }
+
+    .second-post{
+        flex-wrap: unset;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iteam{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .item-category{
+        gap: 10px;
+    }
+
+    .footer{
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+
+    .footer-info{
+        margin-top: 28px;
+    }
+}
